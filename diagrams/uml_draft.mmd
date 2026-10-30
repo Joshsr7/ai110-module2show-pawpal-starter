@@ -1,0 +1,40 @@
+classDiagram
+    %% Phase 1 draft, written before implementation.
+
+    class Owner {
+        +str name
+        +int available_minutes
+        +list~Pet~ pets
+        +add_pet(pet)
+        +get_all_tasks() list
+    }
+
+    class Pet {
+        +str name
+        +str species
+        +list~Task~ tasks
+        +add_task(task)
+        +list_tasks() list
+    }
+
+    class Task {
+        +str description
+        +str time
+        +int duration_minutes
+        +str priority
+        +str frequency
+        +bool completed
+        +mark_complete()
+    }
+
+    class Scheduler {
+        +Owner owner
+        +sort_by_time() list
+        +filter_tasks() list
+        +detect_conflicts() list
+        +build_daily_plan() list
+    }
+
+    Owner "1" o-- "0..*" Pet : owns
+    Pet "1" o-- "0..*" Task : needs
+    Scheduler --> Owner : reads tasks from
