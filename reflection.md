@@ -39,7 +39,7 @@ Conflict detection also only warns. It does not move tasks for the owner. I thin
 
 **a. How you used AI**
 
-I used AI to turn my UML into class skeletons, to brainstorm which scheduling features made sense, to write and explain tests, and to help connect the classes to Streamlit with session_state. The most helpful prompts were specific ones that named the file and the method, like asking how detect_conflicts should handle two tasks that touch but do not overlap.
+I used AI to turn my UML into class skeletons, to brainstorm which scheduling features made sense, to write and explain tests, and to help connect the classes to Streamlit with session_state. The most helpful prompts were specific ones that named the file and the method, like asking how detect_conflicts should handle two tasks that touch but do not overlap. The most effective features were chat with the file attached, so answers were about my actual code, and agent mode for changes that touched several files at once, like recurring tasks. I used a separate chat for design, for the algorithms, and for testing. That kept each conversation focused and stopped old ideas from earlier phases from leaking into new answers.
 
 **b. Judgment and verification**
 
@@ -71,4 +71,4 @@ I would let the owner edit or delete tasks from the app, let them set their own 
 
 **c. Key takeaway**
 
-Designing first saved time, but the design still had to change once real features needed things like dates. AI was fast at writing code, but I had to be the one who decided what the system should do and who proved it worked with tests.
+Designing first saved time, but the design still had to change once real features needed things like dates. Being the lead architect meant AI was fast at writing code, but I had to be the one who decided what the system should do, kept the design simple, and proved it worked with tests.
